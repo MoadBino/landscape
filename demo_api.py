@@ -496,7 +496,10 @@ def get_design_image(design_id):
 
 
 if __name__ == "__main__":
-    init_db()
+ try:
+     init_db()
+ except Exception as e:
+    print("DB init failed:", e)
     host = os.getenv("HOST", "0.0.0.0")
     port = int(os.getenv("PORT", "5000"))
     debug = os.getenv("FLASK_DEBUG", "true").lower() == "true"
