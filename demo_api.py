@@ -16,12 +16,6 @@ from pymongo import ASCENDING, MongoClient
 from pymongo.errors import ServerSelectionTimeoutError
 
 
-
-
-
-
-
-
 try:
     from dotenv import load_dotenv
     load_dotenv()
